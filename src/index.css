@@ -1,13 +1,257 @@
-body {
+html * {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  height: auto;
+}
+html body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
+html .HomePage .Header {
+  background-color: #132043;
+  height: 4rem;
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+}
+html .HomePage .Header p {
+  padding: 18px 30px;
+  color: #FDF0F0;
+  font-size: larger;
+  font-weight: bold;
+  cursor: default;
+}
+html .HomePage .Header .icon {
+  margin: 18px 30px;
+  color: #FDF0F0;
+}
+html .HomePage .Nav {
+  width: 100%;
+  background-color: #132043;
+  min-height: 3rem;
+  border-bottom: 1px solid #FDF0F0;
+  display: flex;
+  justify-content: space-between;
+}
+html .HomePage .Nav .SearchBar {
+  margin: 5px 10px;
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid #FDF0F0;
+  border-radius: 1rem;
+  color: #FDF0F0;
+}
+html .HomePage .Nav .SearchBar .search-box {
+  width: 100%;
+  color: #FDF0F0;
+  outline: none;
+  background-color: transparent;
+  border: 0;
+  width: 25rem;
+}
+html .HomePage .Nav .SearchBar input {
+  padding-left: 25px;
+}
+html .HomePage .Nav ul {
+  display: flex;
+}
+html .HomePage .Nav ul li {
+  padding: 10px 20px;
+  list-style: none;
+  color: #FDF0F0;
+}
+html .HomePage .Nav ul li a {
+  text-decoration: none;
+  color: #FDF0F0;
+  cursor: pointer;
+}
+html .HomePage .Nav ul li:hover {
+  text-decoration: underline;
+}
+@media (max-width: 725px) {
+  html .HomePage .Nav {
+    flex-direction: column;
+  }
+  html .HomePage .Nav .SearchBar {
+    width: 100%;
+    margin: 0;
+  }
+  html .HomePage .Nav ul {
+    justify-content: center;
+  }
+}
+html .HomePage .Missing {
+  min-height: 100vh;
+  background-color: #1F4172;
+  color: #FDF0F0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+html .HomePage .Missing h2 {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+}
+html .HomePage .Missing p {
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+}
+html .HomePage .Missing p a {
+  color: #FDF0F0;
+}
+html .HomePage .About {
+  min-height: 100vh;
+  background-color: #1F4172;
+  color: #FDF0F0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+html .HomePage .About h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+html .HomePage .About p {
+  font-size: 1rem;
+}
+html .HomePage .PostPage {
+  min-height: 100vh;
+  background-color: #1F4172;
+  color: #FDF0F0;
+}
+html .HomePage .PostPage .postArt {
+  display: flex;
+  flex-direction: column;
+}
+html .HomePage .PostPage .postArt h2 {
+  margin-left: 2rem;
+  text-decoration: underline;
+}
+html .HomePage .PostPage .postArt p {
+  margin: 0.5rem 4rem;
+}
+html .HomePage .PostPage .postArt a {
+  color: #FDF0F0;
+}
+html .HomePage .PostPage .postArt button {
+  display: flex;
+  width: 20%;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  height: 35px;
+  background-color: #132043;
+  color: #FDF0F0;
+  margin: 1rem 2rem;
+}
+html .HomePage .PostPage .postArt button:hover {
+  border: 1px solid #FDF0F0;
+  cursor: pointer;
+}
+html .HomePage .NewPost {
+  min-height: 100vh;
+  background-color: #1F4172;
+  color: #FDF0F0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+html .HomePage .NewPost p {
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  font-weight: bold;
+}
+html .HomePage .NewPost .newPostForm {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+html .HomePage .NewPost .newPostForm label {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+html .HomePage .NewPost .newPostForm input {
+  border: none;
+  border-radius: 2rem;
+  padding-left: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  height: 2rem;
+  width: 150%;
+}
+html .HomePage .NewPost .newPostForm textarea {
+  border: none;
+  border-radius: 2rem;
+  resize: none;
+  padding: 1rem 1rem;
+  font-size: 1rem;
+  height: 7rem;
+  width: 200%;
+}
+html .HomePage .NewPost .newPostForm button {
+  display: flex;
+  width: 40%;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  height: 35px;
+  background-color: #132043;
+  color: #FDF0F0;
+  margin: 1rem 2rem;
+}
+html .HomePage .NewPost .newPostForm button:hover {
+  border: 1px solid #FDF0F0;
+  cursor: pointer;
+}
+@media (max-width: 479px) {
+  html .HomePage .NewPost .newPostForm input {
+    font-size: 0.7rem;
+    width: 80%;
+  }
+  html .HomePage .NewPost .newPostForm textarea {
+    font-size: 0.7rem;
+    width: 120%;
+  }
+}
+html .HomePage .Home {
+  min-height: 100vh;
+  background-color: #1F4172;
+  color: #FDF0F0;
+  display: flex;
+  flex-direction: column;
+}
+html .HomePage .Home .PostArticle {
+  border-bottom: 2px solid #FDF0F0;
+  margin: 30px 30px;
+  padding: 15px 30px;
+}
+html .HomePage .Home .PostArticle a {
+  text-decoration: none;
+  color: #FDF0F0;
+}
+html .HomePage .Home .PostArticle p {
+  padding: 8px 20px;
+}
+html .HomePage .Footer {
+  background-color: #132043;
+  display: flex;
+  justify-content: center;
+  min-height: 4rem;
+  flex-shrink: 0;
+}
+html .HomePage .Footer p {
+  padding-top: 1rem;
+  color: #FDF0F0;
+  font-size: large;
+  font-weight: bold;
+}/*# sourceMappingURL=index.css.map */
