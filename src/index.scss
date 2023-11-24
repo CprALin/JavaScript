@@ -305,6 +305,8 @@ html{
             justify-content: center;
             min-height: 4rem;
             flex-shrink: 0;
+            flex-direction: column;
+            align-items: center;
 
             p {
               padding-top: 1rem;    
