@@ -1,5 +1,6 @@
 const fs = require('fs');
 const replaceTamplate = require('./modules/replaceTemplate');
+const slugify = require('slugify');
 
 //FILES
 //blocking , synchronous way
@@ -42,6 +43,9 @@ const tempCard = fs.readFileSync(`${__dirname}/starter/templates/template-card.h
 const tempProduct = fs.readFileSync(`${__dirname}/starter/templates/template-product.html`, 'utf-8');
 const data = fs.readFileSync(`${__dirname}/starter/dev-data/data.json`, 'utf-8');
 const dataObj = JSON.parse(data);
+
+const slugs = dataObj.map(el => slugify(el.productName, {lower : true}));
+console.log(slugs);
 
 const server = http.createServer((req , res) => {
     //console.log(req.url);
